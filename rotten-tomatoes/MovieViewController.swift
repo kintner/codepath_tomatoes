@@ -65,19 +65,19 @@ class MovieViewController: UIViewController, UITableViewDataSource, UITableViewD
             self.movieTableView.reloadData()
             
         }
-        
-        
     }
-
-
-    /*
-    // MARK: - Navigation
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        movieTableView.deselectRowAtIndexPath(indexPath, animated: true)
+    }
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        var vc = segue.destinationViewController as DetailsViewController;
+        var path = movieTableView.indexPathForCell(sender as UITableViewCell)
+        vc.movie = movies[path!.row] as NSDictionary
+ 
     }
-    */
+    
 
 }
