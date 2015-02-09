@@ -3,8 +3,7 @@
 
 target 'rotten-tomatoes' do
   pod 'AFNetworking', '~> 2.0'
-  #pod 'MBProgressHUD', '~> 0.8'
-  #pod 'Toast', '~> 2.2'
+  pod 'SVProgressHUD'
 end
 
 target 'rotten-tomatoesTests' do
